@@ -30,6 +30,7 @@ public static class SoundManager
             AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
             audioSource.clip = GetAudioClip(sound);
             audioSource.Play();
+            Object.Destroy(soundGameObject, audioSource.clip.length);
         }
     }
 
@@ -40,6 +41,7 @@ public static class SoundManager
             GameObject soundGameObject = new GameObject("Sound");
             AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
             audioSource.PlayOneShot(GetAudioClip(sound));
+            Object.Destroy(soundGameObject, audioSource.clip.length);
         }
     }
 

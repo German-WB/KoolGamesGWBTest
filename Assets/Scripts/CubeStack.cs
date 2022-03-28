@@ -36,17 +36,21 @@ public class CubeStack : MonoBehaviour
         {
             if(stackedCubeList.Count == 0)
             {
+                GameManager.instance.LoseGame();
                 Destroy(this.gameObject);
             }
-            stackParent.localPosition += Vector3.down;
+            else
+            {
+                stackParent.localPosition += Vector3.down;
 
-            other.GetComponent<BoxCollider>().enabled = false;
+                other.GetComponent<BoxCollider>().enabled = false;
 
-            GameObject cubeToDestroy = stackedCubeList[stackedCubeList.Count - 1];
-            stackedCubeList.RemoveAt(stackedCubeList.Count - 1);
-            Destroy(cubeToDestroy);
-            SoundManager.PlaySound(SoundManager.Sound.WallHit, GetPosition());
-            Debug.Log(stackedCubeList.Count);
+                GameObject cubeToDestroy = stackedCubeList[stackedCubeList.Count - 1];
+                stackedCubeList.RemoveAt(stackedCubeList.Count - 1);
+                Destroy(cubeToDestroy);
+                SoundManager.PlaySound(SoundManager.Sound.WallHit, GetPosition());
+                Debug.Log(stackedCubeList.Count);
+            }
         }
     }
 
