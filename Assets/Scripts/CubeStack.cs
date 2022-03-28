@@ -7,7 +7,9 @@ public class CubeStack : MonoBehaviour
 
     [SerializeField] private Transform stackParent;
     private Vector3 newPos;
-
+    private GameObject lastCube;
+    private WaitForEndOfFrame _waitFrame;
+    private readonly List<GameObject> stackedCubeList = new List<GameObject>();
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Cube"))
@@ -26,6 +28,31 @@ public class CubeStack : MonoBehaviour
             newPos.y *= -1f;
             Cube.localPosition = newPos;
             Cube.localRotation = Quaternion.identity;
+            stackedCubeList.Add(Cube.gameObject);
+            SoundManager.PlaySound(SoundManager.Sound.CubeStack);
+        }
+
+        if (other.CompareTag("EnemyCube"))
+        {
+            if(stackedCubeList.Count == 0)
+            {
+                SoundManager.PlaySound(SoundManager.Sound.WallHit);
+                Destroy(this.gameObject);
+            }
+            stackParent.localPosition += Vector3.down;
+
+            other.GetComponent<BoxCollider>().enabled = false;
+
+            GameObject cubeToDestroy = stackedCubeList[stackedCubeList.Count - 1];
+            stackedCubeList.RemoveAt(stackedCubeList.Count - 1);
+            Destroy(cubeToDestroy);
+            Debug.Log(stackedCubeList.Count);
         }
     }
+
+    //Generamos obstáculo
+    //Generamos cada columna
+    //Si hay numero 1, añadimos a lista lvl1 row
+    //Si hay numero 2, añadimos a lista lvl2 row
 }
+

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private int _speed;
+    [SerializeField] private int _horizontalSpeed;
+    [SerializeField] private int _forwardSpeed;
 
     void Update()
     {
@@ -14,8 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private void Movement()
     {
         float hspeed = Input.GetAxis("Horizontal");
-        float vspeed = Input.GetAxis("Vertical");
-        Vector3 direction = new Vector3(hspeed * _speed, 0f, vspeed * _speed);
+        Vector3 direction = new Vector3(hspeed * _horizontalSpeed, 0f, _forwardSpeed);
         transform.Translate(direction * Time.deltaTime);
     }
 }

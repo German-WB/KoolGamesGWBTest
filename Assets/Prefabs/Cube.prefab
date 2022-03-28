@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 5209847432706989920}
   - component: {fileID: 2361057395413203400}
   - component: {fileID: 3729318137959660049}
-  - component: {fileID: 8254421855796222097}
   m_Layer: 6
-  m_Name: Cube
+  m_Name: RAYA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8254421855796222097
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915246369602913019}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2057586136188575976
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +92,6 @@ GameObject:
   - component: {fileID: 2057586136188575972}
   - component: {fileID: 2057586136188575975}
   - component: {fileID: 2057586136188575974}
-  - component: {fileID: 2057586136188575977}
   - component: {fileID: 1421884411}
   m_Layer: 6
   m_Name: Cube
@@ -157,7 +142,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7df4391a75c4a84c9afb9e9c3866fc3, type: 2}
+  - {fileID: 2100000, guid: f168c535d006e9548826e0d43c95c336, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -179,19 +164,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2057586136188575977
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057586136188575976}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1421884411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -203,5 +175,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 1.3, z: 1.3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.98128444, y: 0.70382535, z: 1.3}
+  m_Center: {x: -0.023032397, y: 0.009873867, z: 0}
