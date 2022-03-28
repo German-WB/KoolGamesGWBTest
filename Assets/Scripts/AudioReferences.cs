@@ -23,8 +23,7 @@ public class AudioReferences : MonoBehaviour
 [System.Serializable]
     public class SoundAudioClip
     {
-    public SoundManager.Sound sound;
-    public AudioClip audioclip;
-
+        public SoundManager.Sound sound;
+        public AudioClip audioclip;
     }
 }

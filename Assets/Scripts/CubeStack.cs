@@ -29,14 +29,13 @@ public class CubeStack : MonoBehaviour
             Cube.localPosition = newPos;
             Cube.localRotation = Quaternion.identity;
             stackedCubeList.Add(Cube.gameObject);
-            SoundManager.PlaySound(SoundManager.Sound.CubeStack);
+            SoundManager.PlaySound(SoundManager.Sound.CubeStack, GetPosition());
         }
 
         if (other.CompareTag("EnemyCube"))
         {
             if(stackedCubeList.Count == 0)
             {
-                SoundManager.PlaySound(SoundManager.Sound.WallHit);
                 Destroy(this.gameObject);
             }
             stackParent.localPosition += Vector3.down;
@@ -46,11 +45,16 @@ public class CubeStack : MonoBehaviour
             GameObject cubeToDestroy = stackedCubeList[stackedCubeList.Count - 1];
             stackedCubeList.RemoveAt(stackedCubeList.Count - 1);
             Destroy(cubeToDestroy);
+            SoundManager.PlaySound(SoundManager.Sound.WallHit, GetPosition());
             Debug.Log(stackedCubeList.Count);
         }
     }
 
-    //Generamos obstáculo
+    private Vector3 GetPosition()
+    {
+        return transform.position;
+    }
+        //Generamos obstáculo
     //Generamos cada columna
     //Si hay numero 1, añadimos a lista lvl1 row
     //Si hay numero 2, añadimos a lista lvl2 row
