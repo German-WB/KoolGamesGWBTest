@@ -7,8 +7,6 @@ public class CubeStack : MonoBehaviour
 
     [SerializeField] private Transform stackParent;
     private Vector3 newPos;
-    private GameObject lastCube;
-    private WaitForEndOfFrame _waitFrame;
     private readonly List<GameObject> stackedCubeList = new List<GameObject>();
     private void OnTriggerEnter(Collider other)
     {
@@ -58,9 +56,6 @@ public class CubeStack : MonoBehaviour
     {
         return transform.position;
     }
-        //Generamos obstáculo
-    //Generamos cada columna
-    //Si hay numero 1, añadimos a lista lvl1 row
-    //Si hay numero 2, añadimos a lista lvl2 row
+
 }
 

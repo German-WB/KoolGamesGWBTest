@@ -33,4 +33,5 @@ public class GameHandler : MonoBehaviour
         GameManager.instance.gameStarted -= EnablePlayer;
         GameManager.instance.gameLost -= DisablePlayer;
     }
+
 }
