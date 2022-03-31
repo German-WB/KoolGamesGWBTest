@@ -30,7 +30,10 @@ public static class SoundManager
             AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
             audioSource.clip = GetAudioClip(sound);
             audioSource.Play();
-            Object.Destroy(soundGameObject, audioSource.clip.length);
+            if (sound == Sound.WallHit)
+                Object.Destroy(soundGameObject, 0.7f);
+            else
+                Object.Destroy(soundGameObject, audioSource.clip.length);
         }
     }
 

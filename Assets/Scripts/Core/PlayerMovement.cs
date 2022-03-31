@@ -20,11 +20,13 @@ public class PlayerMovement : MonoBehaviour
 
     void OnMouseDrag()
     {
-        Vector3 delta = Input.mousePosition - lastMousePos;
-        Vector3 pos = transform.position;
-        pos.x += delta.x * _dragSpeed;
-        transform.position = new Vector3(Mathf.Clamp(pos.x, -1.75f, 1.75f), pos.y, pos.z);
-        lastMousePos = Input.mousePosition;      
+        if (GameManager.instance.isPlaying)
+        {
+            Vector3 delta = Input.mousePosition - lastMousePos;
+            Vector3 pos = transform.position;
+            pos.x += delta.x * _dragSpeed;
+            transform.position = new Vector3(Mathf.Clamp(pos.x, -1.75f, 1.75f), pos.y, pos.z);
+            lastMousePos = Input.mousePosition;      
+        }
     }
-
 }

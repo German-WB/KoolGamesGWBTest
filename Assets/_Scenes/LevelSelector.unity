@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 130, y: -850}
+  m_AnchoredPosition: {x: 130, y: -1030}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75493308
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 372708089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fd6b0fd3215ce447a12c9a64a5d3640, type: 3}
+  m_Script: {fileID: 11500000, guid: cffd7c9b8362d8545b63e990530cf5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lvlButtons:
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 372708089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a572a531de50d741883a6db8226ee00, type: 3}
+  m_Script: {fileID: 11500000, guid: 8651b752bd5244e49889616524203722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &435917651
@@ -2002,7 +2002,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1724387632}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d61b9414d4db615409b206012fd2938a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f534b57d4e7edc428c0d9338ad931d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _lvlselection: {fileID: 372708090}

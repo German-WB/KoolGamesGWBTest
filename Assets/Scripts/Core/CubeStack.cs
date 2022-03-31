@@ -57,5 +57,10 @@ public class CubeStack : MonoBehaviour
         return transform.position;
     }
 
+    public int GetStackedCubes()
+    {
+        return stackedCubeList.Count;
+    }
+
 }
 

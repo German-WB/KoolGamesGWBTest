@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public bool isPlaying;
 
-    public event Action gameStarted, gameLost;
+    public event Action GameStarted, GameLost, Lvlpassed;
 
     private void Awake()
     {
@@ -24,13 +24,21 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         isPlaying = true;
-        gameStarted?.Invoke();
+        GameStarted?.Invoke();
         Debug.Log("GameStarted Event");
     }
 
     public void LoseGame()
     {
         isPlaying = false;
+        GameLost?.Invoke();
         Debug.Log("GameLostEvent");
+    }
+
+    public void LvlPassed()
+    {
+        isPlaying = false;
+        Lvlpassed?.Invoke();
+        Debug.Log("LvlpassedEvent");
     }
 }
