@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4888477912335502399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4888477912335502397}
+  - component: {fileID: 4888477912335502396}
+  - component: {fileID: 4888477912335502394}
+  - component: {fileID: 4888477912335502395}
+  m_Layer: 0
+  m_Name: GameHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4888477912335502397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4888477912335502399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4888477912335502396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4888477912335502399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be63b92cfb2cb74ebb1a4aeb3135206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerMovement: {fileID: 0}
+  levelDataSO:
+  - {fileID: 11400000, guid: 936bba8e0edcc934384e7b75a7ac9c49, type: 2}
+  - {fileID: 11400000, guid: 9c26e8c86b2a5ad43b2ab0b1770761a9, type: 2}
+  - {fileID: 11400000, guid: af63a7f3e11ecd04fa03653bf8a21721, type: 2}
+  _countDownTimer: {fileID: 0}
+--- !u!114 &4888477912335502394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4888477912335502399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a43b301b64f5264ab506faf4dfca9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 0}
+--- !u!114 &4888477912335502395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4888477912335502399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4625b8b093697f74398bc0ef3def566f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  persisterName: LevelData
+  objectsToPersist:
+  - {fileID: 11400000, guid: 936bba8e0edcc934384e7b75a7ac9c49, type: 2}
+  - {fileID: 11400000, guid: 9c26e8c86b2a5ad43b2ab0b1770761a9, type: 2}
+  - {fileID: 11400000, guid: af63a7f3e11ecd04fa03653bf8a21721, type: 2}

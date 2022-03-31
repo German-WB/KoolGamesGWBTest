@@ -1278,6 +1278,7 @@ GameObject:
   - component: {fileID: 1495488395}
   - component: {fileID: 1495488394}
   - component: {fileID: 1495488396}
+  - component: {fileID: 1495488397}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -1297,6 +1298,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be63b92cfb2cb74ebb1a4aeb3135206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerMovement: {fileID: 0}
+  levelDataSO:
+  - {fileID: 11400000, guid: 936bba8e0edcc934384e7b75a7ac9c49, type: 2}
+  - {fileID: 11400000, guid: 9c26e8c86b2a5ad43b2ab0b1770761a9, type: 2}
+  - {fileID: 11400000, guid: af63a7f3e11ecd04fa03653bf8a21721, type: 2}
   _countDownTimer: {fileID: 1826679723}
 --- !u!4 &1495488395
 Transform:
@@ -1325,6 +1331,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 1851125214}
+--- !u!114 &1495488397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495488393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4625b8b093697f74398bc0ef3def566f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  persisterName: LevelData
+  objectsToPersist:
+  - {fileID: 11400000, guid: 936bba8e0edcc934384e7b75a7ac9c49, type: 2}
+  - {fileID: 11400000, guid: 9c26e8c86b2a5ad43b2ab0b1770761a9, type: 2}
+  - {fileID: 11400000, guid: af63a7f3e11ecd04fa03653bf8a21721, type: 2}
 --- !u!1 &1524742651
 GameObject:
   m_ObjectHideFlags: 0

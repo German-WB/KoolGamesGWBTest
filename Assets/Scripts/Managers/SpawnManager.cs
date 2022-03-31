@@ -7,6 +7,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject cube;
     [SerializeField] private GameObject enemyRow;
     [SerializeField] private int extraSpawnChance;
+    private List<Transform> cubeList = new List<Transform>();
 
     public bool isEnemySpawner;
     private bool isRowSpawningActive;
@@ -38,7 +39,9 @@ public class SpawnManager : MonoBehaviour
             {
                 float xPos = Random.Range(-1.5f, 1.7f);
                 Vector3 spawningPosition = new Vector3(xPos, transform.position.y, transform.position.z);
-                Instantiate(cube, spawningPosition, Quaternion.identity);
+                GameObject instantiatedCube = Instantiate(cube, spawningPosition, Quaternion.identity);
+                cubeList.Add(instantiatedCube.transform);
+                SaveSpawningData();
             }
         }
         else
@@ -49,7 +52,8 @@ public class SpawnManager : MonoBehaviour
                 if (spawnChance + extraSpawnChance >= 60 || mustSpawn)
                 {
                     Vector3 spawningPosition = new Vector3(transform.position.x, transform.position.y + extraHeight, transform.position.z);
-                    Instantiate(enemyRow, spawningPosition, Quaternion.identity);
+                    GameObject instantiatedCube = Instantiate(enemyRow, spawningPosition, Quaternion.identity);
+                    cubeList.Add(instantiatedCube.transform);
                     extraSpawnChance -= 15;
                     extraHeight++;
                     mustSpawn = false;
@@ -58,8 +62,13 @@ public class SpawnManager : MonoBehaviour
                 else
                     isRowSpawningActive = false;
             }
-
+            SaveSpawningData();
         }
-
     }
+
+    public List<Transform> SaveSpawningData()
+    {
+        return cubeList;
+    }
+
 }
