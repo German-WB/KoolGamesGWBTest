@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
-    [SerializeField] private PlayerMovement _playerMovement;
     public LevelData[] levelDataSO;
     public GameObject _countDownTimer;
+    private PlayerMovement _playerMovement;
     private SpawnManager[] spawningData;
     
     // Start is called before the first frame update

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,10 @@ public class CubeStack : MonoBehaviour
 {
 
     [SerializeField] private Transform stackParent;
+    [SerializeField] private ParticleSystem _cubeStackEffect;
     private Vector3 newPos;
     private readonly List<GameObject> stackedCubeList = new List<GameObject>();
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Cube"))
@@ -28,6 +31,7 @@ public class CubeStack : MonoBehaviour
             Cube.localRotation = Quaternion.identity;
             stackedCubeList.Add(Cube.gameObject);
             SoundManager.PlaySound(SoundManager.Sound.CubeStack, GetPosition());
+            _cubeStackEffect.Play();
         }
 
         if (other.CompareTag("EnemyCube"))

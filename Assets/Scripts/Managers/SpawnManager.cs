@@ -18,16 +18,20 @@ public class SpawnManager : MonoBehaviour
     {
         if (isEnemySpawner)
             isRowSpawningActive = true;
+       
+    }
+    private void Start()
+    {
+        StartSpawning();
+        // --- Needs a fix ---
+        //GameManager.instance.GameStarted += StartSpawning;
+        //StartCoroutine(DisableSpawnersRoutine());
     }
 
-    void Start()
+    private IEnumerator DisableSpawnersRoutine()
     {
-        GameManager.instance.GameStarted += StartSpawning;
-    }
-
-    private void OnDestroy()
-    {
-        GameManager.instance.GameStarted -= StartSpawning;
+        yield return new WaitForSeconds(2f);
+        //GameManager.instance.GameStarted -= StartSpawning;
     }
 
     public void StartSpawning()

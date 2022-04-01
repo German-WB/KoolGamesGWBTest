@@ -9,7 +9,6 @@ public static class SoundManager
     {
         CubeStack,
         WallHit,
-        Die,
         LevelCompleted
     }
 
@@ -34,6 +33,7 @@ public static class SoundManager
                 Object.Destroy(soundGameObject, 0.7f);
             else
                 Object.Destroy(soundGameObject, audioSource.clip.length);
+
         }
     }
 
